@@ -1,0 +1,110 @@
+.develop {
+  margin-bottom: clamp(3.75rem, 1.197rem + 12.77vw, 11.25rem);
+  &__blocks {
+    position: relative;
+    display: flex;
+    align-items: center;
+    //150 = 80
+    padding-left: clamp(1.875rem, -0.678rem + 12.77vw, 9.375rem);
+    gap: clamp(2.5rem, 1.223rem + 6.38vw, 6.25rem);
+    border-left: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      border-left-color: var(--blue-general);
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+    @media (max-width: 800px) {
+      padding-left: 0;
+      gap: 30px;
+      border: none;
+      box-shadow: none !important;
+      border-color: none;
+    }
+
+    @media (max-width: 550px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__title {
+    font-family: Circular Std, sans-serif;
+    //72 = 35
+    font-size: clamp(2.188rem, 1.4rem + 3.94vw, 4.5rem);
+    font-weight: 900;
+    // line-height: 91px;
+    color: var(--blue-general);
+    margin-bottom: clamp(0.938rem, 0.618rem + 1.6vw, 1.875rem);
+  }
+
+  &__descript {
+    @include inter-descript;
+    max-width: 510px;
+    width: 100%;
+    color: var(--gray);
+    margin-bottom: 30px;
+  }
+
+  &__btn {
+    position: relative;
+    max-width: 215px;
+    display: block;
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 3px;
+      background-color: var(--blue);
+    }
+    a {
+      @include inter;
+      color: var(--black);
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+
+  &__right {
+    max-width: 453px;
+    width: 100%;
+    // max-height: 455px;
+
+    img {
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: -20px 20px 60px 0px #79a4ff4d;
+    }
+  }
+}
+
+.build {
+  &__blocks {
+    display: flex;
+    align-items: center;
+    //150 = 80
+    padding-right: 150px;
+    gap: 100px;
+    padding-left: 0px;
+    padding-right: clamp(1.875rem, -0.678rem + 12.77vw, 9.375rem);
+    gap: clamp(2.5rem, 1.223rem + 6.38vw, 6.25rem);
+    border-right: 2px solid transparent;
+    transition: border 0.3s ease-in-out;
+    &:hover {
+      border-right-color: var(--blue-general);
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+    @media (max-width: 800px) {
+      padding-right: 0;
+      gap: 30px;
+      border: none;
+      box-shadow: none !important;
+      border-color: none;
+    }
+
+    @media (max-width: 550px) {
+      flex-direction: column;
+    }
+  }
+}
