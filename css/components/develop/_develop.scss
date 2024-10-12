@@ -75,7 +75,7 @@
 
     &::before {
       content: "";
-      background-image: url("/img/decor-dots.png");
+      background-image: url("../img/decor-dots.png");
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
@@ -92,7 +92,7 @@
 
     &::after {
       content: "";
-      background-image: url("/img/decor-green.png");
+      background-image: url("../img/decor-green.png");
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
@@ -110,7 +110,7 @@
     /* Додатковий елемент для третьої декорації */
     .decor-yellow {
       content: "";
-      background-image: url("/img/decor-yellow.png");
+      background-image: url("../img/decor-yellow.png");
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
