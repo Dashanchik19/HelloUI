@@ -1,0 +1,123 @@
+.reviews {
+  background-color: #f8f8fa;
+  padding: 150px 0;
+
+  &__descript {
+    color: var(--gray);
+    @include inter-descript;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  &__title {
+    font-family: Circular Std, sans-serif;
+    //72 = 35
+    font-size: clamp(2.188rem, 1.4rem + 3.94vw, 4.5rem);
+    font-weight: 900;
+    color: var(--blue-general);
+    margin-bottom: 70px;
+    text-align: center;
+  }
+
+  // reviews__blocks
+
+  &__blocks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    @media (max-width: 880px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__block {
+    max-width: 420px;
+    width: 100%;
+    min-height: 370px;
+    border-radius: 10px;
+    border: 1px 0px 0px 0px;
+    border: 1px solid #0000001a;
+    background-color: #ffffff;
+    padding: 20px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+    &.active {
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    @media (max-width: 600px) {
+      max-width: 320px;
+      min-height: 100px;
+      margin: 0 auto;
+    }
+  }
+
+  &__above {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    i {
+      font-size: 25px;
+      color: #03a9f4;
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    img {
+      width: 45px;
+      height: 45px;
+      background-color: aquamarine;
+      border-radius: 30px;
+    }
+  }
+
+  .name {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    p {
+      font-family: Circular Std, sans-serif;
+      //16 = 10
+      font-size: clamp(0.5rem, 0.33rem + 0.85vw, 1rem);
+      font-weight: 600;
+      color: #050038;
+    }
+
+    i {
+      font-size: 16px;
+    }
+  }
+
+  &__person {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    .link {
+      @include inter;
+      color: #596068;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  //__contents
+
+  &__contents {
+    @include inter;
+    font-size: clamp(0.5rem, 0.372rem + 0.64vw, 0.875rem);
+    line-height: clamp(0.938rem, 0.746rem + 0.96vw, 1.5rem);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.625rem, 0.199rem + 2.13vw, 1.875rem);
+    color: #050038;
+  }
+}

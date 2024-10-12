@@ -85,3 +85,29 @@ const titleElement = document.querySelector(".main__title");
 // Викликаємо функцію з текстом та затримкою
 typeWriter(titleElement, `Grow up your sells\nwith us.`, 100);
 // Використовуємо \n для переносу рядка
+
+/* reviews animation blur */
+
+let reviews = document.querySelectorAll(".reviews__block");
+
+reviews.forEach((review) => {
+  review.addEventListener("mouseenter", () => {
+    review.classList.add("active");
+
+    reviews.forEach((otherReview) => {
+      if (otherReview !== review) {
+        otherReview.style.filter = "blur(5px)";
+      }
+    });
+  });
+
+  review.addEventListener("mouseleave", () => {
+    // Прибираємо клас active, коли мишка виходить за межі елемента
+    review.classList.remove("active");
+
+    // Вимикаємо ефект blur для всіх елементів
+    reviews.forEach((otherReview) => {
+      otherReview.style.filter = "none";
+    });
+  });
+});
