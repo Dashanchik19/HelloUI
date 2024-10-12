@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "../css/addition/reset.css";
 :root {
   /* Colors */
@@ -18,6 +19,13 @@
   z-index: 99;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+@media (max-width: 500px) {
+  .header {
+    padding: 0;
+    padding-top: 5px;
+    padding-bottom: 20px;
+  }
+}
 .header__blocks {
   display: flex;
   align-items: center;
@@ -34,8 +42,8 @@
 }
 @media (max-width: 500px) {
   .header__logo {
-    text-align: center;
-    margin-bottom: 20px;
+    text-align: left;
+    margin-bottom: 5px;
   }
 }
 .header__logo h1 {
@@ -556,21 +564,18 @@
 }
 
 .develop {
+  position: relative;
   margin-bottom: clamp(3.75rem, 1.197rem + 12.77vw, 11.25rem);
 }
 .develop__blocks {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding-right: 0;
   padding-left: clamp(1.875rem, -0.678rem + 12.77vw, 9.375rem);
   gap: clamp(2.5rem, 1.223rem + 6.38vw, 6.25rem);
-  border-left: 2px solid transparent;
-  transition: all 0.3s ease-in-out;
   cursor: pointer;
-}
-.develop__blocks:hover {
-  border-left-color: var(--blue-general);
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 @media (max-width: 800px) {
   .develop__blocks {
@@ -607,9 +612,19 @@
 .develop__btn {
   position: relative;
   max-width: 215px;
+  width: 100%;
   display: block;
 }
-.develop__btn::before {
+.develop__btn a {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+  color: var(--black);
+  font-size: clamp(0.813rem, 0.706rem + 0.53vw, 1.125rem);
+  font-weight: 600;
+}
+.develop__btn a::before {
   position: absolute;
   content: "";
   left: 0;
@@ -618,17 +633,65 @@
   height: 3px;
   background-color: var(--blue);
 }
-.develop__btn a {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: var(--black);
-  font-size: 18px;
-  font-weight: 600;
-}
 .develop__right {
   max-width: 453px;
   width: 100%;
+  position: relative;
+  /* Додатковий елемент для третьої декорації */
+}
+.develop__right::before {
+  content: "";
+  background-image: url("/img/decor-dots.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  width: clamp(3.75rem, 2.899rem + 4.26vw, 6.25rem);
+  height: clamp(3.75rem, 2.899rem + 4.26vw, 6.25rem);
+  z-index: -10;
+}
+@media (max-width: 800px) {
+  .develop__right::before {
+    opacity: 0.5;
+  }
+}
+.develop__right::after {
+  content: "";
+  background-image: url("/img/decor-green.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 15px;
+  right: -30px;
+  width: clamp(3.75rem, 2.899rem + 4.26vw, 6.25rem);
+  height: clamp(3.75rem, 2.899rem + 4.26vw, 6.25rem);
+  z-index: -10;
+}
+@media (max-width: 800px) {
+  .develop__right::after {
+    opacity: 0.5;
+  }
+}
+.develop__right .decor-yellow {
+  content: "";
+  background-image: url("/img/decor-yellow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  bottom: -40px;
+  right: -3vw;
+  z-index: -10;
+  width: clamp(5rem, 3.511rem + 7.45vw, 9.375rem);
+  height: clamp(5rem, 3.511rem + 7.45vw, 9.375rem);
+}
+@media (max-width: 800px) {
+  .develop__right .decor-yellow {
+    opacity: 0.5;
+  }
 }
 .develop__right img {
   border-radius: 10px;
@@ -644,12 +707,6 @@
   padding-left: 0px;
   padding-right: clamp(1.875rem, -0.678rem + 12.77vw, 9.375rem);
   gap: clamp(2.5rem, 1.223rem + 6.38vw, 6.25rem);
-  border-right: 2px solid transparent;
-  transition: border 0.3s ease-in-out;
-}
-.build__blocks:hover {
-  border-right-color: var(--blue-general);
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 @media (max-width: 800px) {
   .build__blocks {
@@ -674,7 +731,7 @@
   font-style: normal;
 }
 [class*=__container] {
-  max-width: 1260px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0 30px;
 }

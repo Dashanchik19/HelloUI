@@ -1,21 +1,20 @@
 .develop {
+  position: relative;
   margin-bottom: clamp(3.75rem, 1.197rem + 12.77vw, 11.25rem);
   &__blocks {
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     //150 = 80
+    padding-right: 0;
     padding-left: clamp(1.875rem, -0.678rem + 12.77vw, 9.375rem);
     gap: clamp(2.5rem, 1.223rem + 6.38vw, 6.25rem);
-    border-left: 2px solid transparent;
-    transition: all 0.3s ease-in-out;
     cursor: pointer;
-    &:hover {
-      border-left-color: var(--blue-general);
-      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    }
+
     @media (max-width: 800px) {
       padding-left: 0;
+
       gap: 30px;
       border: none;
       box-shadow: none !important;
@@ -48,28 +47,86 @@
   &__btn {
     position: relative;
     max-width: 215px;
+    width: 100%;
     display: block;
-    &::before {
-      position: absolute;
-      content: "";
-      left: 0;
-      bottom: -4px;
-      width: 100%;
-      height: 3px;
-      background-color: var(--blue);
-    }
     a {
       @include inter;
+      position: relative;
       color: var(--black);
-      font-size: 18px;
+      font-size: clamp(0.813rem, 0.706rem + 0.53vw, 1.125rem);
+      // font-size: 5px;
       font-weight: 600;
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: -4px;
+        width: 100%;
+        height: 3px;
+        background-color: var(--blue);
+      }
     }
   }
 
   &__right {
     max-width: 453px;
     width: 100%;
-    // max-height: 455px;
+    position: relative;
+
+    &::before {
+      content: "";
+      background-image: url("/img/decor-dots.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      bottom: -30px;
+      left: -30px;
+      width: clamp(3.75rem, 2.899rem + 4.26vw, 6.25rem);
+      height: clamp(3.75rem, 2.899rem + 4.26vw, 6.25rem);
+      z-index: -10;
+      @media (max-width: 800px) {
+        opacity: 0.5;
+      }
+    }
+
+    &::after {
+      content: "";
+      background-image: url("/img/decor-green.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      top: 15px;
+      right: -30px;
+      width: clamp(3.75rem, 2.899rem + 4.26vw, 6.25rem);
+      height: clamp(3.75rem, 2.899rem + 4.26vw, 6.25rem);
+      z-index: -10;
+      @media (max-width: 800px) {
+        opacity: 0.5;
+      }
+    }
+
+    /* Додатковий елемент для третьої декорації */
+    .decor-yellow {
+      content: "";
+      background-image: url("/img/decor-yellow.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      bottom: -40px;
+      right: -3vw;
+      // width: 100px;
+      // height: 100px;
+      z-index: -10;
+      //150  = 80
+      width: clamp(5rem, 3.511rem + 7.45vw, 9.375rem);
+      height: clamp(5rem, 3.511rem + 7.45vw, 9.375rem);
+      @media (max-width: 800px) {
+        opacity: 0.5;
+      }
+    }
 
     img {
       border-radius: 10px;
@@ -89,12 +146,6 @@
     padding-left: 0px;
     padding-right: clamp(1.875rem, -0.678rem + 12.77vw, 9.375rem);
     gap: clamp(2.5rem, 1.223rem + 6.38vw, 6.25rem);
-    border-right: 2px solid transparent;
-    transition: border 0.3s ease-in-out;
-    &:hover {
-      border-right-color: var(--blue-general);
-      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    }
     @media (max-width: 800px) {
       padding-right: 0;
       gap: 30px;
