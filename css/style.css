@@ -641,7 +641,7 @@
 }
 .develop__right::before {
   content: "";
-  background-image: url("/img/decor-dots.png");
+  background-image: url("../img/decor-dots.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -659,7 +659,7 @@
 }
 .develop__right::after {
   content: "";
-  background-image: url("/img/decor-green.png");
+  background-image: url("../img/decor-green.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -677,7 +677,7 @@
 }
 .develop__right .decor-yellow {
   content: "";
-  background-image: url("/img/decor-yellow.png");
+  background-image: url("../img/decor-yellow.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
