@@ -1,6 +1,5 @@
 .footer {
   position: relative;
-  //   height: 961px;
   background-color: #130c3a;
   padding-top: 150px;
   .docs {
@@ -8,7 +7,7 @@
     top: 30px;
     left: -130px;
     content: "";
-    background-image: url("../img/decor-dots.png");
+    background-image: url("../../../img/decor-dots.png");
     background-repeat: no-repeat;
     background-size: cover;
     max-width: clamp(9.375rem, 5.822rem + 17.77vw, 19.813rem);
@@ -25,8 +24,8 @@
     background-image: url("../img/circle.png");
     background-repeat: no-repeat;
     background-size: contain;
-    max-width: 350px;
-    height: 350px;
+    max-width: clamp(15.625rem, 13.497rem + 10.64vw, 21.875rem);
+    height: clamp(15.625rem, 13.497rem + 10.64vw, 21.875rem);
     width: 100%;
   }
 
@@ -38,19 +37,11 @@
     background-image: url("../img/circle.png");
     background-repeat: no-repeat;
     background-size: contain;
-    max-width: 350px;
-    height: 350px;
+    max-width: clamp(15.625rem, 13.497rem + 10.64vw, 21.875rem);
+    height: clamp(15.625rem, 13.497rem + 10.64vw, 21.875rem);
+
     width: 100%;
     transform: rotate(180deg);
-  }
-
-  .circle0 {
-    position: absolute;
-    background-color: #0555ff;
-    content: "";
-    background-image: url("../img/circle0.png");
-    background-repeat: no-repeat;
-    background-size: contain;
   }
 
   &__wrapper {
@@ -66,6 +57,7 @@
       background-size: contain;
       width: clamp(5rem, 3.511rem + 7.45vw, 9.375rem);
       height: clamp(5rem, 3.511rem + 7.45vw, 9.375rem);
+
       transform: rotate(100deg);
     }
 
@@ -77,8 +69,8 @@
       background-size: contain;
       top: -150px;
       right: 0;
-      width: 188.41px;
-      height: 188.41px;
+      width: clamp(7.5rem, 6.053rem + 7.23vw, 11.75rem);
+      height: clamp(7.5rem, 6.053rem + 7.23vw, 11.75rem);
     }
   }
 
@@ -89,7 +81,7 @@
     font-weight: 600;
     color: var(--blue-general);
     text-align: center;
-    line-height: 85px;
+    line-height: clamp(3.125rem, 2.38rem + 3.72vw, 5.313rem);
     color: white;
     max-width: 639px;
     width: 100%;
@@ -101,35 +93,37 @@
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
-    max-width: 748px;
+    //748 = 500
+    max-width: clamp(31.25rem, 25.973rem + 26.38vw, 46.75rem);
     width: 100%;
-    height: 80px;
+    height: clamp(3.75rem, 3.324rem + 2.13vw, 5rem);
     margin: 0 auto;
     margin-top: 40px;
-    margin-bottom: 150px;
+    margin-bottom: clamp(4.375rem, 2.673rem + 8.51vw, 9.375rem);
     input {
-      padding: 0 30px;
+      padding: 0 clamp(0.938rem, 0.618rem + 1.6vw, 1.875rem);
       color: white;
       border: 1px solid #ffffff80;
       width: 100%;
     }
 
     button {
-      max-width: 221px;
+      //220 = 150
+      max-width: clamp(6.25rem, 3.697rem + 12.77vw, 13.75rem);
       width: 100%;
-      height: 80px;
+      height: clamp(3.75rem, 3.324rem + 2.13vw, 5rem);
       border-radius: 0px 10px 10px 0px;
       background: #0555ff;
       border: 1px solid #0555ff;
       color: var(--white);
       @include inter-descript;
-      font-size: 22px;
+      font-size: clamp(0.938rem, 0.789rem + 0.74vw, 1.375rem);
       text-align: center;
     }
     input::placeholder {
       color: #c1c1c1;
       @include inter-descript;
-      font-size: 22px;
+      font-size: clamp(0.938rem, 0.789rem + 0.74vw, 1.375rem);
     }
   }
 }
@@ -139,10 +133,31 @@
   justify-content: space-between;
   gap: 30px;
   margin-bottom: 100px;
+  text-align: left;
+  @media (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  @media (max-width: 520px) {
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 105px;
+    gap: clamp(3.75rem, 2.793rem + 4.79vw, 6.563rem);
+    @media (max-width: 520px) {
+      grid-template-columns: repeat(2, 1fr);
+      margin: 0 auto;
+      gap: 30;
+    }
   }
 
   &__logo {
@@ -159,7 +174,8 @@
   &__email {
     margin-bottom: 10px;
     @include inter;
-    font-size: 16px;
+    //16 = 13
+    font-size: clamp(0.813rem, 0.749rem + 0.32vw, 1rem);
     color: #7884a6;
   }
 
@@ -170,7 +186,8 @@
   &__social-link {
     color: #fff;
     margin-right: 20px;
-    font-size: 18px;
+    //18 = 15
+    font-size: clamp(0.938rem, 0.874rem + 0.32vw, 1.125rem);
     text-decoration: none;
   }
 
@@ -189,7 +206,6 @@
 
   &__link {
     color: #7884a6;
-
     text-decoration: none;
     transition: color 0.3s ease;
   }
