@@ -8,7 +8,7 @@
     top: 30px;
     left: -130px;
     content: "";
-    background-image: url("/img/decor-dots.png");
+    background-image: url("../img/decor-dots.png");
     background-repeat: no-repeat;
     background-size: cover;
     max-width: clamp(9.375rem, 5.822rem + 17.77vw, 19.813rem);
@@ -22,7 +22,7 @@
     bottom: 0px;
     left: 0;
     content: "";
-    background-image: url("/img/circle.png");
+    background-image: url("../img/circle.png");
     background-repeat: no-repeat;
     background-size: contain;
     max-width: 350px;
@@ -35,7 +35,7 @@
     top: 350px;
     right: 0;
     content: "";
-    background-image: url("/img/circle.png");
+    background-image: url("../img/circle.png");
     background-repeat: no-repeat;
     background-size: contain;
     max-width: 350px;
@@ -48,7 +48,7 @@
     position: absolute;
     background-color: #0555ff;
     content: "";
-    background-image: url("/img/circle0.png");
+    background-image: url("../img/circle0.png");
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -61,7 +61,7 @@
       left: -50px;
       top: -130px;
       content: "";
-      background-image: url("/img/decor-yellow.png");
+      background-image: url("../img/decor-yellow.png");
       background-repeat: no-repeat;
       background-size: contain;
       width: clamp(5rem, 3.511rem + 7.45vw, 9.375rem);
@@ -72,7 +72,7 @@
     .circle-blue {
       position: absolute;
       content: "";
-      background-image: url("/img/circle-blue.png");
+      background-image: url("../img/circle-blue.png");
       background-repeat: no-repeat;
       background-size: contain;
       top: -150px;
