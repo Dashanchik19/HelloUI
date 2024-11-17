@@ -421,6 +421,10 @@
   width: clamp(1.25rem, 0.931rem + 1.6vw, 2.188rem);
   height: clamp(1.25rem, 0.931rem + 1.6vw, 2.188rem);
 }
+.main img.move {
+  width: auto; /* використовує фактичний розмір зображення */
+  height: auto;
+}
 
 .carrousel {
   overflow: hidden;
